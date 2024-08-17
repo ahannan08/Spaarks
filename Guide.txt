@@ -1,0 +1,95 @@
+//to create a restaurant
+route:-  POST /api/restaurants
+
+//enter dets of your own choice
+{
+  "name": "",
+  "description": "",
+  "location": {
+    "coord": [ -74.0060, 40.7128 ] // [longitude, latitude]
+  },
+  "rating": // Rating out of 10
+}
+
+
+
+--x---x----x----x----x---x-
+
+//to update
+route:- PUT /api/restaurants/:id
+
+
+--x---x----x----x----x---x-
+
+//to get all the restaurant
+route:- GET /api/restaurants/:id
+
+-> it returns a 2mb file..hence due to its size it will not be displayed 
+
+
+--x---x----x----x----x---x-
+
+
+//to  delete
+route:- DELETE /api/restaurants/:id
+
+
+--x---x----x----x----x---x-
+
+
+to search for nearby restaurants
+
+route:-POST /api/restaurants/nearby
+
+INPUT:-
+
+1)
+{
+  "Latitude": 40.7128,
+  "Longitude": -74.0060,
+  "Radius": 500 // Radius in meters
+}
+
+2)
+{
+  "Latitude": 40.730610,
+  "Longitude": -73.935242,
+  "Radius": 1000
+}
+
+3)
+
+
+
+--x---x----x----x----x---x-
+
+
+to search for restaurants with min and max dist
+
+INPUT:- POST /api/restaurants/distance
+1) 
+{
+    "Latitude": 37.7749,
+    "Longitude": -122.4194,
+    "minimumDistance": 2000, 
+    "maximumDistance": 5000  
+}
+
+2)
+{
+  "Latitude": 40.7128,
+  "Longitude": -74.0060,
+  "minimumDistance": 200, 
+  "maximumDistance": 1500 
+}
+
+3)
+{
+  "Latitude": 40.730610,
+  "Longitude": -73.935242,
+  "minimumDistance": 500, 
+  "maximumDistance": 2000 
+}
+
+
+--x---x----x----x----x---x-
